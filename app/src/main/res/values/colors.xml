@@ -5,6 +5,7 @@
     <color name="colorAccent">#FFFFFF</color>
     <color name="colorAccentDark">#DCDADA</color>
     <color name="colorBlack">#000000</color>
+    <color name="colorGray">#959393</color>
 
     <!-- OVERWRITE THESE COLORS FOR A LIGHT THEME -->
     <!-- MaterialDrawer DEFAULT colors -->

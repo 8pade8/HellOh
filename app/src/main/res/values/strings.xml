@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Hell Oh!</string>
+    <string name="settings_text_account">Аккаунт</string>
+    <string name="settings_default_user_name">Mikhail Tatishchev</string>
+    <string name="settings_default_status">в сети</string>
+    <string name="settings_default_number_phone">+79111111111</string>
+    <string name="settings_label_number_phone">Нажмите, чтобы изменить номер телефона</string>
+    <string name="settings_label_login">Имя пользователя</string>
+    <string name="settings_default_login">Mikhail Tatishchev</string>
+    <string name="settings_label_bio">Напишите немного о себе</string>
+    <string name="settings_default_bio">О себе</string>
 </resources>
