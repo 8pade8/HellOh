@@ -11,4 +11,9 @@
     <string name="settings_default_bio">О себе</string>
     <string name="settings_menu_exit">Выход</string>
     <string name="settings_menu_change_name">Изменить имя</string>
+    <string name="register_text_enter_code">Введите код</string>
+    <string name="register_text_we_sent">Мы отправили СМС с кодом проверки на Ваш телефон</string>
+    <string name="register_hint_default_code">_ _ _ _ _ _</string>
+    <string name="register_title_your_phone">Ваш телефон</string>
+    <string name="register_toast_enter_phone">Введите номер телефона</string>
 </resources>
