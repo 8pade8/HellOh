@@ -1,9 +1,10 @@
 package ru.trueproggers.helloh.ui.fragments
 
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fragment_enter_phone_number.*
 import ru.trueproggers.helloh.R
+import ru.trueproggers.helloh.utilits.replaceFragment
+import ru.trueproggers.helloh.utilits.showToast
 
 class EnterPhoneNumberFragment : Fragment(R.layout.fragment_enter_phone_number) {
     override fun onStart() {
@@ -12,17 +13,9 @@ class EnterPhoneNumberFragment : Fragment(R.layout.fragment_enter_phone_number) 
     }
 
     private fun sendCode() {
-        if (register_phone_number.text.toString().isEmpty()) {
-            Toast.makeText(
-                activity,
-                getString(R.string.register_toast_enter_phone),
-                Toast.LENGTH_SHORT
-            )
-                .show()
+        if (register_input_phone_number.text.toString().isEmpty()) {
+            showToast(getString(R.string.register_toast_enter_phone))
         } else
-            fragmentManager?.beginTransaction()
-                ?.replace(R.id.registerDataContainer, EnterCodeFragment())
-                ?.addToBackStack(null)
-                ?.commit()
+            replaceFragment(EnterCodeFragment())
     }
 }

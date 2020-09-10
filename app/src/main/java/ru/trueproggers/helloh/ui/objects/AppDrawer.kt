@@ -14,6 +14,7 @@ import com.mikepenz.materialdrawer.model.ProfileDrawerItem
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem
 import ru.trueproggers.helloh.R
 import ru.trueproggers.helloh.ui.fragments.SettingsFragment
+import ru.trueproggers.helloh.utilits.replaceFragment
 
 class AppDrawer(val mainActivity: AppCompatActivity, val toolBar: Toolbar) {
     private lateinit var mDrawer: Drawer
@@ -95,12 +96,7 @@ class AppDrawer(val mainActivity: AppCompatActivity, val toolBar: Toolbar) {
                     drawerItem: IDrawerItem<*>
                 ): Boolean {
                     when (position) {
-                        7 -> mainActivity.supportFragmentManager.beginTransaction()
-                            .addToBackStack(null)
-                            .replace(R.id.dataContainer,
-                                SettingsFragment()
-                            )
-                            .commit()
+                        7 -> mainActivity.replaceFragment(SettingsFragment())
                     }
                     return false
                 }

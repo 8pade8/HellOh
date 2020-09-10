@@ -8,6 +8,8 @@ import ru.trueproggers.helloh.activities.RegisterActivity
 import ru.trueproggers.helloh.databinding.ActivityMainBinding
 import ru.trueproggers.helloh.ui.fragments.ChatsFragment
 import ru.trueproggers.helloh.ui.objects.AppDrawer
+import ru.trueproggers.helloh.utilits.replacActivity
+import ru.trueproggers.helloh.utilits.replaceFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -28,18 +30,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initFunc() {
-        if (false) {
+        if (true) {
             setSupportActionBar(mToolbar)
             mAppDrawer.create()
-            supportFragmentManager.beginTransaction()
-                .replace(
-                    R.id.dataContainer,
-                    ChatsFragment()
-                )
-                .commit()
+            replaceFragment(ChatsFragment())
         } else {
-            val intent = Intent(this, RegisterActivity::class.java)
-            startActivity(intent)
+            replacActivity(RegisterActivity())
         }
     }
 

@@ -6,6 +6,7 @@ import androidx.appcompat.widget.Toolbar
 import ru.trueproggers.helloh.R
 import ru.trueproggers.helloh.databinding.ActivityRegisterBinding
 import ru.trueproggers.helloh.ui.fragments.EnterPhoneNumberFragment
+import ru.trueproggers.helloh.utilits.replaceFragment
 
 class RegisterActivity : AppCompatActivity() {
 
@@ -23,8 +24,6 @@ class RegisterActivity : AppCompatActivity() {
         mToolbar = mBinding.registerToolbar
         setSupportActionBar(mToolbar)
         title = getString(R.string.register_title_your_phone)
-        supportFragmentManager.beginTransaction()
-            .add(R.id.registerDataContainer, EnterPhoneNumberFragment())
-            .commit()
+        replaceFragment(EnterPhoneNumberFragment())
     }
 }
